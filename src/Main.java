@@ -27,16 +27,14 @@ public class Main {
             players.add(new Player(name,symbol));
         }
         Game game=controller.createGame(n,players, GameStatus.IN_PROGRESS);
-        System.out.println("Debug");
-        while (game.getGameStatus().equals(GameStatus.IN_PROGRESS)){
-            System.out.println("debug");
+      //  System.out.println("Debug");
+        while (controller.getGameStatus(game).equals(GameStatus.IN_PROGRESS)){
+      //      System.out.println("debug");
             controller.display(game);
-            System.out.println("Enter row :");
-            int row=scanner.nextInt();
-            System.out.println("Enter col :");
-            int col=scanner.nextInt();
+            controller.makeMove(game);
 
-         //   controller.makeMove(new Cell(row,col,CellState.FILLED),players.get(playerIndex++),game);
+
+
 
         }
         if (game.getGameStatus().equals(GameStatus.DRAW)){

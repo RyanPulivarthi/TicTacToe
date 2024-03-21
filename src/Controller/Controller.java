@@ -13,9 +13,12 @@ public class Controller {
         Game game= Game.builder().setDimensions(dimension).setPlayers(players).build();
         return game;
     }
-     public void  makeMove(Cell cell, Player player, Game game){
-        game.makeMove(cell,player);
+     public void  makeMove(Game game){
+        game.makeMove();
 
+    }
+    public GameStatus getGameStatus(Game game){
+        return game.getGameStatus();
     }
     public void display(Game game){
          game.getBoard().display();

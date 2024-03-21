@@ -20,8 +20,9 @@ public class Board {
         for(int i=0;i<dimension;i++){
             for (int j=0;j<dimension;j++){
                 if(cells.get(i).get(j).getCellState().equals(CellState.EMPTY))
-                    System.out.println("| |");
-                System.out.println("|"+cells.get(i).get(j).getPlayer().getSymbol()+"|");
+                    System.out.print("| |");
+                else
+                    System.out.print("|"+cells.get(i).get(j).getPlayer().getSymbol()+"|");
             }
             System.out.println();
         }

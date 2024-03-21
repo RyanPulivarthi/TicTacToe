@@ -11,11 +11,12 @@ public class Cell {
         this.col=col;
         this.cellState=cellState;
     }
-    public Cell(int row,int col,Player player){
+   /* public Cell(int row,int col,Player player){
         this.row=row;
         this.col=col;
         this.player=player;
-    }
+        this.cellState=CellState.FILLED;
+    }*/
 
     public Player getPlayer() {
         return player;
