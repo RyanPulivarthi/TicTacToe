@@ -84,6 +84,7 @@ public class Game {
                 System.out.println(playerToMove.getName()+" has won the game");
             }
             System.out.println("debug in outside if");
+            nextPlayerIndex%= board.dimension;
 
 
         }
@@ -128,7 +129,7 @@ public class Game {
             game.setMoves(new ArrayList<>());
             game.setPlayers(players);
             game.setCheckWinner(new CheckWinner(dimensions));
-          //  game.nextPlayerIndex=0;
+            game.nextPlayerIndex=0;
             return game;
         }
     }
